@@ -80,12 +80,14 @@ section h2 {
 
 
 .lista-dragoes {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
 }
 
 .lista-dragoes li {
     list-style: none;
-    max-width: 23%;
+    max-width: 100%;
     margin-bottom: 24px;
     display: grid;
     grid-area: auto;
@@ -135,28 +137,32 @@ button {
     }
 
     .lista-dragoes {
-        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
     .lista-dragoes li h3 {
         margin: 18px 0;
     }
 
-    .menu-hamburguer {
-        display: none;
-    }
-
-    nav {
-        display: flex;
+    .menu-hamburguer{
+        margin-top: 10px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .container {
         max-width: 90%;
+        flex-direction: column;
     }
 
     .lista-dragoes {
-        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
     }
+
+    .menu-hamburguer{
+        margin-top: 10px;
+    }
+
 }
